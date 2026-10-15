@@ -1,0 +1,50 @@
+{
+  "backend": [
+    0,
+    0
+  ],
+  "case": "simulated-process",
+  "model_version": "1",
+  "neighborhoods": {
+    "0": [
+      "etch"
+    ],
+    "1": [
+      "etch"
+    ]
+  },
+  "budget": 2,
+  "queries": [
+    {
+      "id": "q1",
+      "stage": "etch",
+      "likelihood": [
+        [
+          0.9,
+          0.1
+        ],
+        [
+          0.1,
+          0.9
+        ]
+      ],
+      "cost": 1,
+      "latency": 1,
+      "risk": 0,
+      "available": true
+    }
+  ],
+  "observations": {
+    "q1": 0
+  },
+  "commands": [
+    {
+      "query": "q1",
+      "actor": "scripted_example",
+      "rationale": "Inspect the declared available process measurement",
+      "edit": "accept",
+      "confirm": true
+    }
+  ],
+  "true_hypothesis": 0
+}
