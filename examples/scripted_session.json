@@ -1,0 +1,69 @@
+{
+  "case": "finite-etch-1",
+  "model_version": "fixed-likelihood-v1",
+  "backend": [
+    0,
+    0
+  ],
+  "neighborhoods": {
+    "0": [
+      "etch"
+    ],
+    "1": [
+      "etch"
+    ]
+  },
+  "budget": 2,
+  "queries": [
+    {
+      "id": "q0",
+      "stage": "etch",
+      "cost": 1,
+      "latency": 1,
+      "likelihood": [
+        [
+          0.9,
+          0.1
+        ],
+        [
+          0.1,
+          0.9
+        ]
+      ]
+    },
+    {
+      "id": "q1",
+      "stage": "etch",
+      "cost": 1,
+      "latency": 1,
+      "likelihood": [
+        [
+          0.8,
+          0.2
+        ],
+        [
+          0.2,
+          0.8
+        ]
+      ]
+    }
+  ],
+  "observations": {
+    "q0": 0,
+    "q1": 0
+  },
+  "commands": [
+    {
+      "query": "q0",
+      "actor": "scripted_operator",
+      "rationale": "fixed protocol first observation"
+    },
+    {
+      "query": "q1",
+      "actor": "scripted_operator",
+      "rationale": "fixed protocol confirmation",
+      "confirm": true
+    }
+  ],
+  "true_hypothesis": 0
+}

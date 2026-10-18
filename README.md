@@ -71,3 +71,11 @@ evidencetrail execute --input example.json --output runs/execution --variant ful
 ```
 
 The example is an explicit analytical/simulated input specification, not an experiment result. Replace it with the schema described above for application data. The execute path writes the actual selected actions, constraints, and mechanism metrics.
+
+## Selected reproduction setting
+
+Use the bundled two-hypothesis scripted investigation with fixed likelihoods, two admissible queries, an explicit confirmation and replayable signed evidence. The actor is scripted_operator and time/cost are simulation coefficients. This setting measures evidence handling and audit replay; it does not require human participants.
+
+```bash
+python -m evidencetrail.cli execute --input examples/scripted_session.json --output runs/finite --variant full
+```
